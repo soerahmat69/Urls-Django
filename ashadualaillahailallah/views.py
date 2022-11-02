@@ -1,6 +1,6 @@
+
 from multiprocessing import context
 from django.shortcuts import render
-# Create your views here.
 from django.http import HttpResponse
 from .models import Post
 
@@ -12,6 +12,11 @@ def index(request):
         'post': db
     }
     return render (request,'index.html', context);
+
+def articles(request,year):
+    year=year 
+    str=year
+    return HttpResponse(year)
 
 
 
