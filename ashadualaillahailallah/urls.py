@@ -24,6 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blogs/', include('blogs.urls', namespace='blogs')),
     path('about/', include('about.urls', namespace='about')),
+    path('form/',  views.form, name='form'),
     path('', views.index, name='index'),
     re_path(r'^articles/(?P<year>[0-9]{4})/$', views.articles),
 ]

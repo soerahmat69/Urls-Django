@@ -16,7 +16,18 @@
 
 <hr>
 
-<h1>ini adalah blogs</h1>
+<h1>ini adalah form</h1>
+<form method="POST">
+{% csrf_token %}
+<table>{{classform.as_table}}</table>
+<label for="">isi nama</label>
+<input type="text" id="nama" name="nama">
+<label for="">isi alamatmu</label>
+<input type="text" id="alamat" name="alamat">
+<button type="submit">kirim</button>
+</form>
+<h2>ini namamu {{nama}} atao {{namac}}</h2>
+<h2>alamatmu {{alamat}}atao {{alamatc}}</h2>
 
 <ul>
     <li ><a href="{% url 'index' %}">home</a></li>
